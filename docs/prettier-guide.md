@@ -27,11 +27,14 @@ Prettier is an **opinionated code formatter** that:
 ### Your HTML Before Prettier
 
 ```html
-<div><h1>My    Poem</h1>
-    <p  class='author'>By Jane   Doe</p>
-        <section>
+<div>
+  <h1>My Poem</h1>
+  <p class="author">By Jane Doe</p>
+  <section>
     <p>First line of the poem</p>
-<p>Second line here</p></section></div>
+    <p>Second line here</p>
+  </section>
+</div>
 ```
 
 ### After Running Prettier
@@ -165,4 +168,4 @@ Prettier is like having a helpful assistant that instantly cleans up your code. 
 
 ---
 
-*Remember: Good code isn't just code that works - it's code that's easy to read and maintain. Prettier helps you achieve both.*
+_Remember: Good code isn't just code that works - it's code that's easy to read and maintain. Prettier helps you achieve both._

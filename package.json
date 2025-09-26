@@ -1,0 +1,26 @@
+{
+  "name": "poetry-interpretation-curban2336",
+  "version": "1.0.0",
+  "description": "Welcome to your Poetry Interpretation project! This project will teach you professional web development workflows using GitHub Issues as specifications.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{html,css,md,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/poetry-interpretation-curban2336.git"
+  },
+  "author": "Christopher Urban <g00269489s@stu.raritanval.edu> (https://github.com/curban2336)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/poetry-interpretation-curban2336/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/poetry-interpretation-curban2336#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

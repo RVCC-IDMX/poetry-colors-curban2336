@@ -4,7 +4,6 @@ about: Creates all specification issues for your project
 title: 'Initialize Specs'
 labels: ''
 assignees: ''
-
 ---
 
 ## ⚡ This Issue Creates Your Project Specifications
@@ -14,7 +13,7 @@ assignees: ''
 When you submit this issue with the title "Initialize Specs", GitHub Actions will automatically:
 
 1. Create 4 specification issues for your project
-2. Label them appropriately  
+2. Label them appropriately
 3. Close this issue with a confirmation message
 
 ### What Happens Next?
@@ -33,4 +32,5 @@ Each specification contains checkboxes for requirements you must complete.
 Just submit this issue and the magic will happen! ✨
 
 ---
-*Note: This only works once per repository. If you need to recreate issues, you'll need to delete the existing ones first.*
+
+_Note: This only works once per repository. If you need to recreate issues, you'll need to delete the existing ones first._

@@ -28,7 +28,7 @@ Look at the dropdown menu in your Copilot panel - you'll see three options:
 
 Start conversations in **Ask mode** to plan, then switch to **Agent mode** to implement. This saves tokens and helps you understand what you're building.
 
-## Using Context with #
+## Using Context with
 
 You can reference files and context using `#`:
 
