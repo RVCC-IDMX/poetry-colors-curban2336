@@ -19,11 +19,17 @@
 **Why this mode:** Ready to build after planning
 **Helpful:** Generated semantic HTML matching my poem
 
-### Fixing CSS colors
+### Adding Copied Button
 
-**Mode:** Edit
-**Why this mode:** Needed to change existing styles
-**Helpful:** Updated all color values to improve contrast
+**Mode:** Agent
+**Why this mode:** It needed to add to the already established HTML and CSS as well as create new files. Throughout the process I had the AI adjust the script and files to my specifications, as well as make adjustments on my own.
+**Helpful:** Set the foundation for the copy button and helped make a js script to facilitate that purpose.
+
+### Developing Comment Section
+
+**Mode:** Ask
+**Why this mode:** Gathering information so I know how to build a proper comment section as well as learning how and where to start construction of one.
+**Helpful:** Gave me multiple methods of execution and provided the information I really needed.
 
 ## What I Learned
 

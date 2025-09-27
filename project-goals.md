@@ -29,7 +29,6 @@
 - Copy button to put poem on clipboard
 - Smooth navigation
 - Dynamic font size adjustment for better readability
-- Themed color switcher for common colorblindness impairments
 - Section to display user-submitted interpretations or comments
 
 ## Current Status

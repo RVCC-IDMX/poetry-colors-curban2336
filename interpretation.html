@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interpretation — Stopping by Woods on a Snowy Evening</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="interpretation.html" aria-current="page">Interpretation</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Interpretation</h1>
+      <p>Placeholder for interpretation content. Add analysis, line-by-line notes, and contributions here.</p>
+
+      <!-- Netlify form: submissions go to Netlify for capture -->
+      <section id="submit-comment" aria-labelledby="submit-comments-heading">
+        <h2 id="submit-comments-heading">Leave a Comment</h2>
+
+        <form name="comments" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="comment-form" id="comment-form" aria-describedby="comment-help">
+          <input type="hidden" name="form-name" value="comments">
+          <p class="sr-only"><label>Don’t fill this out if you are human: <input name="bot-field"></label></p>
+
+          <label>
+            Name
+            <input type="text" name="author" required maxlength="50" />
+          </label>
+
+          <label>
+            Comment
+            <textarea name="body" rows="4" required maxlength="1000"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit">Post comment</button>
+            <button type="reset">Clear</button>
+          </div>
+
+          <p id="comment-help" class="sr-only" aria-live="polite">Comments are submitted for review before appearing on the site.</p>
+        </form>
+      </section>
+
+      <!-- Approved comments displayed from a curated JSON file -->
+      <section id="approved-comments" aria-labelledby="approved-comments-heading">
+        <h2 id="approved-comments-heading">Reader Comments</h2>
+        <ul id="comment-list" class="comment-list" aria-live="polite">
+          <!-- JS will render approved comments here from /data/approved-comments.json -->
+        </ul>
+      </section>
+    </main>
+
+    <footer>First published in 1923 · Public Domain</footer>
+  </body>
+</html>

@@ -1,27 +1,78 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Poem — Your Name</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Stopping by Woods on a Snowy Evening — Christopher Urban</title>
+    <!-- Import Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header>
-      <h1>Your Poem Title</h1>
-      <p class="byline">By Author</p>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="interpretation.html">Interpretation</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <article aria-labelledby="poem-title">
-        <section class="stanza">
-          <p>First line</p>
-          <p>Second line</p>
-        </section>
-        <section class="stanza">
-          <p>Next stanza line</p>
-        </section>
-      </article>
-    </main>
-    <footer>Source / attribution</footer>
+
+  <h1 id="poem-title">Stopping by Woods on a Snowy Evening</h1>
+    <h2>by Robert Frost</h2>
+
+    <article class="poem" aria-labelledby="poem-title">
+      <h3 class="poem-heading">Published 1923</h3>
+      <div class="stanza">
+        <span class="line" tabindex="0">Whose woods these are I think I know.</span>
+        <span class="line" tabindex="0">His house is in the village though;</span>
+        <span class="line" tabindex="0">He will not see me stopping here</span>
+        <span class="line" tabindex="0">To watch his woods fill up with snow.</span>
+      </div>
+
+      <figure class="poem-image" aria-hidden="false">
+        <img src="images/WinterEveningOne.jpg" alt="A snowy evening landscape painting">
+        <figcaption>Winter Evening, Robert Frost era illustration</figcaption>
+      </figure>
+
+      <div class="stanza">
+        <span class="line" tabindex="0">My little horse must think it queer</span>
+        <span class="line" tabindex="0">To stop without a farmhouse near</span>
+        <span class="line" tabindex="0">Between the woods and frozen lake</span>
+        <span class="line" tabindex="0">The darkest evening of the year.</span>
+      </div>
+
+      <div class="stanza">
+        <span class="line" tabindex="0">He gives his harness bells a shake</span>
+        <span class="line" tabindex="0">To ask if there is some mistake.</span>
+        <span class="line" tabindex="0">The only other sound’s the sweep</span>
+        <span class="line" tabindex="0">Of easy wind and downy flake.</span>
+      </div>
+
+      <figure class="poem-image" aria-hidden="false">
+        <img src="images/TheRider.jpg" alt="A rider on horseback in winter">
+        <figcaption>The Rider — evocative of the poem's traveler</figcaption>
+      </figure>
+
+      <div class="stanza">
+        <span class="line" tabindex="0">The woods are lovely, dark and deep,</span>
+        <span class="line" tabindex="0">But I have promises to keep,</span>
+        <span class="line" tabindex="0">And miles to go before I sleep,</span>
+        <span class="line" tabindex="0">And miles to go before I sleep.</span>
+      </div>
+
+      <div class="poem-controls">
+        <button id="copy-poem" class="copy-btn" type="button">Copy poem</button>
+        <span id="copy-status" class="sr-only" aria-live="polite"></span>
+      </div>
+    </article>
+
+    <footer>First published in 1923 · Public Domain</footer>
+
+    <script src="js/copy.js" defer></script>
   </body>
 </html>
