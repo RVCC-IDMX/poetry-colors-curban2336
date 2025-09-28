@@ -29,7 +29,7 @@
 - Copy button to put poem on clipboard
 - Smooth navigation
 - Dynamic font size adjustment for better readability
-- Section to display user-submitted interpretations or comments
+- Section to display user-submitted interpretations or comments(Ax-ed for deployment purposes)
 
 ## Current Status
 

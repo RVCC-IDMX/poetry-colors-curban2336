@@ -88,7 +88,7 @@ Reference your files using `#file:` syntax (e.g., `#file:project-goals.md`) to g
 
 ### Your Live Site
 
-**Netlify URL:** [Add your URL here after deployment]
+**Netlify URL:** [[Snowy-Evening by Robert Frost](https://snowyevening-robertfrost.netlify.app/)]
 
 ## Technologies Used
 
@@ -96,6 +96,7 @@ Reference your files using `#file:` syntax (e.g., `#file:project-goals.md`) to g
 
 - HTML5
 - CSS3
+- JS
 - npm
 - Prettier (see `docs/prettier-guide.md` for details)
 - GitHub Copilot (Ask, Agent, and Edit modes)
@@ -107,9 +108,10 @@ Reference your files using `#file:` syntax (e.g., `#file:project-goals.md`) to g
 Explain at least 2 design decisions you made:
 
 1. Why did you choose your fonts?
+   The fonts selected were easy to read at any of the adjusted sizes they would grow or shrink to. This was done to ensure that the content of the webpage would be accessible to all readers regardless of screen size. The title font was selected for the aesthetic synergy with the base font, present a sort of united front from the webpage as a whole.
+
 2. Why did you choose your color scheme?
-3. How did you approach the layout?
-4. Other design decisions necessary for poem choice?
+   It reflected the wintery astmosphere of the poem, as well as catering to accessibility. The whites and greys also allow for amazing contrast. Having friends of mine with color blindness check the sight confirmed this choice as the best.
 
 ## Completion Checklist
 

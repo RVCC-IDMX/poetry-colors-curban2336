@@ -2,8 +2,8 @@
 
 ## Quick Summary
 
-- Which mode did you use most? [Ask/Agent/Edit]
-- Most helpful Copilot moment: [One sentence]
+- Which mode did you use most? [Agent]
+- Most helpful Copilot moment: [When I asked it to help me refine the HTML structure I build, and expanded it with other HTML files that integrate with the main page.]
 
 ## Key Interactions (3-5 entries)
 
@@ -25,10 +25,10 @@
 **Why this mode:** It needed to add to the already established HTML and CSS as well as create new files. Throughout the process I had the AI adjust the script and files to my specifications, as well as make adjustments on my own.
 **Helpful:** Set the foundation for the copy button and helped make a js script to facilitate that purpose.
 
-### Developing Comment Section
+### Adding Conjoined HTML Pages
 
-**Mode:** Ask
-**Why this mode:** Gathering information so I know how to build a proper comment section as well as learning how and where to start construction of one.
+**Mode:** Agent
+**Why this mode:** Gathering information so I know how to integrate multiple HTML pages using a navigation menu at the top of the page. This was crucial to making the user experience better.
 **Helpful:** Gave me multiple methods of execution and provided the information I really needed.
 
 ## What I Learned
