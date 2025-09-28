@@ -34,5 +34,5 @@
 ## What I Learned
 
 - **Ask vs Agent:** Use Ask to understand, Agent to build
-- **Best discovery:** [Something Copilot taught you]
-- **Next time:** [One thing you'd do differently]
+- **Best discovery:** [It taught me how to implement copying to clipboard!]
+- **Next time:** [Would have used Agent to build the whole foundation at once instead of a more piecemeal approach]
