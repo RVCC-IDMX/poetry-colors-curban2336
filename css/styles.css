@@ -1,7 +1,7 @@
 /* ========== Base Styles ========== */
 body {
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: clamp(14px, 1.5vw, 1.5rem); /* 14px to ~18px */
+  font-family: 'Inter', Georgia, system-ui, serif;
+  font-size: var(--text-base);
   line-height: 1.7;
   background-color: #bebfc2; /* soft snowy white */
   color: #1c1c1c; /* near-black for high readability */
@@ -10,9 +10,40 @@ body {
   padding: 2rem;
 }
 
+/* Font Styling */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.woff2')
+       format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Quicksand-VariableFont_wght.woff2')
+       format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* Base settings */
+  --base-size: 18px;
+  --scale-ratio: 1.25;
+
+  /* Type scale */
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.563rem, 1.3rem + 1.3vw, 2rem);
+  --text-2xl: clamp(1.953rem, 1.5rem + 2.25vw, 2.5rem);
+  --text-3xl: clamp(2.441rem, 1.8rem + 3.2vw, 3.5rem);
+}
+
 /* ========== Headings ========== */
 h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* 32px to 56px */
+  font-family: '/fonts/Quicksand-VariableFont_wght.woff2', Georgia, system-ui, serif;
+  font-size: var(--text-3xl);
   text-align: center;
   font-weight: normal;
   line-height: 1.2;
@@ -62,13 +93,13 @@ h1 {
 .site-nav a[aria-current="page"],
 .site-nav a:hover,
 .site-nav a:focus {
-  color: #e0e0e0;
+  color: #ffffff;
   background: #0b66ff; /* stronger accent on hover/focus */
   outline: none;
 }
 
 h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem); /* 20px to 32px */
+  font-size: var(--text-2xl);
   text-align: center;
   font-weight: normal;
   margin-bottom: 1em;
@@ -76,7 +107,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1rem, 2vw, 1.5rem); /* 16px to 24px */
+  font-size: var(--text-xl); /* 16px to 24px */
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -223,25 +254,12 @@ img {
     max-width: 480px;
     max-height: 400px;
   }
-  /* Typography adjustments for medium screens (tablet) */
-  body {
-    font-size: 1.5rem;
+  /* Image and Typography adjustments for medium screens (tablet) */
+  body{
+    font-size: var(--text-lg);
   }
   h1 {
-    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
     background-image: url('https://res.cloudinary.com/chrisurban-portfolio/image/upload/v1759971604/forestbackground.jpg');
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.125rem;
-  }
-  .poem-heading {
-    font-size: 1.125rem;
-  }
-  .line {
-    font-size: 1.3rem;
   }
 }
 
@@ -251,24 +269,8 @@ img {
     max-width: 640px;
     max-height: 480px;
   }
-  /* Typography adjustments for large screens (desktop) */
-  body {
-    font-size: 1.5rem;
-  }
+  /* Image adjustments for large screens (desktop) */
   h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
     background-image: url('https://res.cloudinary.com/chrisurban-portfolio/image/upload/v1759971604/forestbackground1600w.jpg');
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  .poem-heading {
-    font-size: 1.25rem;
-  }
-  .line {
-    font-size: 1.7rem;
   }
 }
