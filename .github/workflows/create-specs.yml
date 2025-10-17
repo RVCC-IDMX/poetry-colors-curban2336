@@ -1,0 +1,63 @@
+name: Create Specification Issues
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-all-issues:
+    if: github.event.issue.title == 'Initialize Specs'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Create required labels if they don't exist
+        run: |
+          gh label create "status:ready-for-review" --color f97316 --description "Ready for instructor review" || true
+          gh label create "status:complete" --color 22c55e --description "Specification completed" || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create Spec 1 - Professional Tooling Setup
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/issue-specs/01-core-tooling.md
+      
+      - name: Wait briefly for issue number sequencing
+        run: sleep 2
+      
+      - name: Create Spec 2 - Semantic HTML Structure
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/issue-specs/02-core-html.md
+      
+      - name: Wait briefly for issue number sequencing
+        run: sleep 2
+      
+      - name: Create Spec 3 - CSS Typography & Layout
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/issue-specs/03-core-css.md
+      
+      - name: Wait briefly for issue number sequencing
+        run: sleep 2
+      
+      - name: Create Spec 4 - Documentation & Deployment
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/issue-specs/04-core-documentation.md
+      
+      - name: Close trigger issue
+        uses: peter-evans/close-issue@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: "✅ All specification issues have been created! Check your Issues tab to see your requirements."
