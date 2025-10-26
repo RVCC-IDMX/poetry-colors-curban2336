@@ -1,0 +1,276 @@
+/* ========== Base Styles ========== */
+body {
+  font-family: 'Inter', Georgia, system-ui, serif;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  background-color: #bebfc2; /* soft snowy white */
+  color: #1c1c1c; /* near-black for high readability */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Font Styling */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.woff2')
+       format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Quicksand-VariableFont_wght.woff2')
+       format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* Base settings */
+  --base-size: 18px;
+  --scale-ratio: 1.25;
+
+  /* Type scale */
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.563rem, 1.3rem + 1.3vw, 2rem);
+  --text-2xl: clamp(1.953rem, 1.5rem + 2.25vw, 2.5rem);
+  --text-3xl: clamp(2.441rem, 1.8rem + 3.2vw, 3.5rem);
+}
+
+/* ========== Headings ========== */
+h1 {
+  font-family: '/fonts/Quicksand-VariableFont_wght.woff2', Georgia, system-ui, serif;
+  font-size: var(--text-3xl);
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  letter-spacing: 0.02em;
+  padding: 2.5rem 1rem;
+
+  /* Background image from project images folder (relative to css/) */
+  background-image: url('https://res.cloudinary.com/chrisurban-portfolio/image/upload/v1759971604/forestbackground400w.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Slight dark overlay to ensure text contrast on the image */
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: multiply;
+
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+/* ========== Navigation ========== */
+.site-header {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0.45rem 0.75rem;
+  color: #555;
+  background-color: #e0e0e0;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #ffffff;
+  background: #0b66ff; /* stronger accent on hover/focus */
+  outline: none;
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: var(--text-xl); /* 16px to 24px */
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Poem Layout ========== */
+.poem {
+  margin-top: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.stanza {
+  margin-bottom: 2.5rem;
+}
+
+/* Poem section heading */
+.poem-heading {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  text-align: center;
+  margin: 0.25rem 0 1rem;
+  font-weight: 600;
+}
+
+.line {
+  display: block;
+  margin-left: 1rem;
+}
+
+/* Hover/focus signpost for poem lines */
+.line {
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.line:hover,
+.line:focus {
+  color: #073d99; /* accent color */
+  background-color: rgba(11, 102, 255, 0.06);
+  outline: none;
+}
+
+/* Improved visible focus for keyboard users */
+.line:focus-visible {
+  box-shadow: 0 0 0 3px rgba(11, 102, 255, 0.12);
+  border-radius: 4px;
+}
+
+/* ========== Accessibility Focus Styles ========== */
+:focus {
+  outline: 2px solid #005f73;
+  outline-offset: 4px;
+}
+
+/* ========== Footer ========== */
+footer {
+  /* Make footer span the full viewport width while inside the centered body */
+  position: relative;
+  left: 50%;
+  margin-left: -50vw; /* pull to left edge */
+  width: 100vw; /* full viewport width */
+  box-sizing: border-box;
+  margin-top: 1.6rem;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 0; /* remove rounded corners when full-width */
+}
+
+/* Keep page content readable by constraining footer inner text */
+footer > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========== Optional Image Styling ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Remove extra gap between poem image and its caption and set default (mobile-first) sizing */
+.poem-image img {
+  display: block;
+  width: 100%;            /* allow image to shrink with viewport */
+  height: auto;           /* preserve aspect ratio */
+  max-width: 360px;       /* typical mobile/full-width card size */
+  max-height: 320px;      /* avoid extremely tall images on small screens */
+  margin: 0 auto 0;       /* centered, no extra gap to caption */
+  object-fit: cover;      /* crop when necessary while preserving focus */
+}
+
+/* Figure caption for poem images: slightly smaller than body text and italic */
+.poem-image {
+  margin: 1.5rem 0;
+}
+
+.poem-image figcaption {
+  font-size: 0.9rem; /* intentionally smaller than body font */
+  font-style: italic;
+  color: #333; /* slightly lighter than main text */
+  text-align: center;
+  margin-top: 0.1rem; /* tightened so caption is closer to the image */
+}
+
+/* Copy button near poem */
+.poem-controls {
+  display: flex;
+  justify-content: center; /* center the button horizontally */
+  align-items: center; /* vertically center if button grows */
+  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+}
+.copy-btn {
+  background: #0b66ff; /* accent */
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 120ms ease;
+  align-content: center;
+}
+.copy-btn:hover { background: #0956d1; }
+.copy-btn:active { transform: translateY(1px); }
+.copy-btn:focus-visible { outline: 3px solid rgba(11,102,255,0.25); outline-offset: 2px; }
+
+/* screen-reader only helper */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0; padding: 0; margin: -1px;
+}
+
+/* Medium screens: allow larger images */
+@media (min-width: 600px) {
+  .poem-image img {
+    max-width: 480px;
+    max-height: 400px;
+  }
+  /* Image and Typography adjustments for medium screens (tablet) */
+  body{
+    font-size: var(--text-lg);
+  }
+  h1 {
+    background-image: url('https://res.cloudinary.com/chrisurban-portfolio/image/upload/v1759971604/forestbackground.jpg');
+  }
+}
+
+/* Desktop / wide viewports: larger images up to poem column width */
+@media (min-width: 900px) {
+  .poem-image img {
+    max-width: 640px;
+    max-height: 480px;
+  }
+  /* Image adjustments for large screens (desktop) */
+  h1 {
+    background-image: url('https://res.cloudinary.com/chrisurban-portfolio/image/upload/v1759971604/forestbackground1600w.jpg');
+  }
+}
